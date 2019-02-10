@@ -1,0 +1,35 @@
+﻿<Window x:Class="ExpenseIt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpenseIt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="490" MinHeight="490" MaxHeight="490" Width="920" MinWidth="920" MaxWidth="920" Cursor="Arrow">
+
+    <Grid Name="grid">
+        <Grid.Background>
+            <ImageBrush TileMode="Tile" ImageSource="pack://siteoforigin:,,,/Resources/bg.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="1*"   />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40"   />
+            <RowDefinition Height="40"   />
+        </Grid.RowDefinitions>
+        <Button Height="30" Content="DownloadAll" x:Name="btnLoadAll" Grid.Row="1" Grid.Column="1" Click="btnLoadAll_Click" Background="#FFB9BDBF" BorderBrush="#FF0DA4EA"  />
+        <ProgressBar  Minimum="0" Maximum="100" Height="30"  x:Name="progressBar"  Grid.Row="2" Grid.Column="1" Background="LightGray" BorderBrush="#FF0DA4EA"   >
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="152,30" MappingMode="Absolute" StartPoint="152,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF58F3D0"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+    </Grid>
+</Window>
